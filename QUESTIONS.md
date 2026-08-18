@@ -6,10 +6,12 @@ Here we have 3 questions related to the code base for you to answer. It is not a
 
 **Answer:**
 Yes, I would refactor the codebase to use the Repository Pattern consistently everywhere. Mixing the Active Record pattern (Store) with the Repository pattern (Warehouse) hurts maintainability and breaks team standards. Standardizing on repositories keeps domain models clean and simplifies core business logic testing.
+
 2. When it comes to API spec and endpoints handlers, we have an Open API yaml file for the `Warehouse` API from which we generate code, but for the other endpoints - `Product` and `Store` - we just coded directly everything. What would be your thoughts about what are the pros and cons of each approach and what would be your choice?
 
 **Answer:**
 I choose Contract-First (OpenAPI). For a distributed warehouse application with multiple modules, ensuring contract stability and preventing breaking API changes is a critical operational priority.
+
 3. Given the need to balance thorough testing with time and resource constraints, how would you prioritize and implement tests for this project? Which types of tests would you focus on, and how would you ensure test coverage remains effective over time?
 
 **Answer:**
